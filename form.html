@@ -1,0 +1,91 @@
+
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body form {
+    font-family: 'Segoe UI', sans-serif; 
+    background-color: #f0f2f5;
+
+    justify-content: center; 
+    align-items: center; 
+    height: fit-content; 
+    margin-left: 550px;
+}
+
+form {
+    background-color: #fff;
+    width: 320px;
+    padding: 20px; 
+    border-radius: 5px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); 
+}
+
+input[type='text'],
+input[type='password'],
+input[type='jobList'],
+select {
+    display: block;
+    width: 100%; 
+    margin-bottom: 15px; 
+    padding: 10px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+button[type='submit'] {
+    background-color: #18f24e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+    width: 100%;
+    cursor: pointer;
+}
+
+button[type='submit']:hover {
+    background-color: #2e8d21;
+}
+</style>
+<body>
+    <form method="post" action="http://localhost:7005/addUser">
+        <div className="form-group">
+          <label for="exampleInputEmail1">Enter Name:</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" name="name" aria-describedby="emailHelp" placeholder="Your Name"/>
+       
+        </div>
+        <div className="form-group">
+          <label for="exampleInputPassword1">Password:</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password"/>
+        </div>
+        <div>
+            <label>Job:
+                <select id="s" name="jobList" aria-placeholder="Select Job" >
+                    <option selected>Choose Job</option>
+                    <option value="SE">Software Engineer</option>
+                    <option value="Web">Web Dev</option>
+                    <option value="DA">Data Analyst</option>
+                    <option value="UID">UI/UX Designer</option>
+                </select>
+            </label><br>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    
+</body>
+</html>
